@@ -7,15 +7,17 @@ const App = () => {
 
   return (
     <>
-     <h1>메달 리스트 만들기~</h1>
-     <MedalInput 
-      medallist={medallist}
-      setMedalList={setMedalList}
-     />
-     <MedalRanking 
-      medallist={medallist}
-      setMedalList={setMedalList}
-     />
+      <div>
+        <h1>메달 리스트 만들기~</h1>
+        <MedalInput 
+          medallist={medallist}
+          setMedalList={setMedalList}
+        />
+        <MedalRanking 
+          medallist={medallist}
+          setMedalList={setMedalList}
+        />
+     </div>
     </>
   )
 }

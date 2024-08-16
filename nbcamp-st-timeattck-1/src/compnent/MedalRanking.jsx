@@ -2,7 +2,6 @@ import React from 'react'
 
 const MedalRanking = ({medallist,setMedalList}) => {
 
-  //삭제,리스트
   const sortedMelList = [...medallist].sort((a,b) => b.gold - a.gold);
 
   const deleteConutry = (deleteConutry) => {
@@ -12,7 +11,7 @@ const MedalRanking = ({medallist,setMedalList}) => {
 
 
   return (
-    <table>
+    <table >
       <thead>
         <tr>
           <td>국가</td>
@@ -30,7 +29,7 @@ const MedalRanking = ({medallist,setMedalList}) => {
             <td>{Entry.silver}</td>
             <td>{Entry.bronze}</td>
             <td>
-              <button onClick={() => deleteConutry(Entry.country)}></button>
+              <button onClick={() => deleteConutry(Entry.country)}>삭제</button>
             </td>
           </tr>
         })}

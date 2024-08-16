@@ -35,6 +35,7 @@ const MedalInput = ({medallist, setMedalList}) => {
         }
         if(isExist){
             alert("이미 추가된 국가입니다!")
+            return;
         }
         clonecountry({country,gold,silver,bronze})
         resetInput();
@@ -70,7 +71,6 @@ const MedalInput = ({medallist, setMedalList}) => {
         <div>
             <label>금메달:</label>
             <input type="number" 
-            placeholder='나라 이름'
             value={gold}
             onChange={(e) => setGold(+e.target.value)}
             min="0"
@@ -79,7 +79,6 @@ const MedalInput = ({medallist, setMedalList}) => {
         <div>
             <label>은메달:</label>
             <input type="number" 
-            placeholder='나라 이름'
             value={silver}
             onChange={(e) => setSilver(+e.target.value)}
             min="0"
@@ -88,7 +87,6 @@ const MedalInput = ({medallist, setMedalList}) => {
         <div>
             <label>동메달:</label>
             <input type="number" 
-            placeholder='나라 이름'
             value={bronze}
             onChange={(e) => setBronze(+e.target.value)}
             min="0"
